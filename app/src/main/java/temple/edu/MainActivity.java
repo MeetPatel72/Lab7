@@ -39,14 +39,16 @@ public class MainActivity extends AppCompatActivity implements BookListFragment.
         FrameLayout fragmentItemDetail = (FrameLayout) findViewById(R.id.flDetailContainer);
         if(fragmentItemDetail != null){
             isTwoPane = true; //set to true
-            BookListFragment fragmentBookList = (BookListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentItemsList);
+            BookListFragment fragmentBookList =
+                    (BookListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentItemsList);
             fragmentBookList.setActivateOnItemClick(true);
         }
     }
 
     @Override
     public void onItemSelected(Item item){
-        if(isTwoPane){
+        if(isTwoPane){ //single activity with kist detail
+            //replace fram layout with correct detail fragment
             BookDetailFragment fragmentItem = BookDetailFragment.newInstance(item);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flDetailContainer, fragmentItem);
@@ -78,7 +80,17 @@ public class MainActivity extends AppCompatActivity implements BookListFragment.
         public Object instantiateItem(ViewGroup container, int position){
             LayoutInflater inflater = LayoutInflater.from(context);
             ViewGroup layout = (ViewGroup) inflater.inflate(R.layout.fragment_book_detail,container,false);
-            
+            TextView title = layout.findViewById(R.id.BDtitle);
+            TextView body = layout.findViewById(R.id.BDbody);
+            title.setText(books.get(position).getTitle());
+            body.setText(books.get(position).getBody());
+            container.addView(layout);
+            return layout;
+        }
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object){
+            container.removeView((View) object);
+
         }
     }
 
