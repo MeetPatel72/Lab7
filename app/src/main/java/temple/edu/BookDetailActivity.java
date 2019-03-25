@@ -22,10 +22,4 @@ public class BookDetailActivity extends FragmentActivity {   //this first book d
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.item_detail, menu);
-        return true;
-    }
-
 }
