@@ -16,10 +16,10 @@
         android:layout_weight="1"
         tools:layout="@layout/fragment_book_list" />
 
-    <View android:background="#000000"
+    <View
         android:layout_width="1dp"
         android:layout_height="wrap_content"
-        />
+        android:background="#000000" />
 
     <FrameLayout
         android:id="@+id/flDetailContainer"

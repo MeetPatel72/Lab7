@@ -18,7 +18,12 @@ import android.widget.TextView;
 import java.util.List;
 
 import java.util.ArrayList;
+/*
+Name:- Meet Patel
+    In this assignment my job was to create bookcase by creating fragments
+    with diffrent screen size.
 
+ */
 
 public class MainActivity extends AppCompatActivity implements BookListFragment.OnItemSelectedListener {
     private boolean isTwoPane = false;

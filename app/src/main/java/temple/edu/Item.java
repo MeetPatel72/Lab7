@@ -21,9 +21,12 @@ public class Item implements Serializable{
     }
     public static  ArrayList<Item>  getItems(){  //get the books or item
         ArrayList<Item> items = new ArrayList<Item>();
-
-        items.add(new Item("Meet", "this is Meet Books"));
-        items.add(new Item("Apple", "this is Apple Books"));
+        items.add(new Item("Meet", "This is Meet books"));
+        items.add(new Item("Becomming", "This is Becoming books"));
+        items.add(new Item("Educated", "This is Educated books"));
+        items.add(new Item("The Complete", "This is The Complete books"));
+        items.add(new Item("Calculus", "This is Calculus books"));
+        items.add(new Item("Chemistry", "This is Chemistry books"));
     return items;
     }
     @Override
