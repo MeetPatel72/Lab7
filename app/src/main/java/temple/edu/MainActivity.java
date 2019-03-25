@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements BookListFragment.
     protected class MyViewPagerAdapter extends PagerAdapter{
         private List<Item> books;
         private Context context;
+
         MyViewPagerAdapter(Context context, List<Item> books){
             this.context = context;
             this.books = books;

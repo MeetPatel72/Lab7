@@ -26,4 +26,8 @@ public class Item implements Serializable{
         items.add(new Item("Apple", "this is Apple Books"));
     return items;
     }
+    @Override
+    public String toString(){
+        return getTitle();
+    }
 }
