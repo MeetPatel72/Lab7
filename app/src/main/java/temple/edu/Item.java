@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class Item implements Serializable{
     private static final long serialVersionId = 1234;
 
+
+    //this classs is for the books list
     private String bookTitle;   //book title and its body
     private String body;
 
@@ -31,6 +33,7 @@ public class Item implements Serializable{
     }
     @Override
     public String toString(){
+
         return getTitle();
     }
 }
